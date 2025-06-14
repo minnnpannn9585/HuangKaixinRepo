@@ -542,11 +542,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ed40e14bc91ae439db2b6b3ee41b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSceneDialogues:
-  - The TV is broadcasting a program from more than ten years ago.
-  openSceneNames:
-  - ' '
+  dialogues:
+  - "An old model TV. I haven\u2019t seen one like this in years."
+  names:
+  - Me
   manager: {fileID: 1763129892}
+  pic: {fileID: 943233851}
 --- !u!1 &225459370
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,11 +809,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ed40e14bc91ae439db2b6b3ee41b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSceneDialogues:
-  - This looks like the schedule from my six grade
-  openSceneNames:
+  dialogues:
+  - 2nd Grade, Class 1, xxxx year. Did I travel back in time?
+  names:
   - Me
   manager: {fileID: 1763129892}
+  pic: {fileID: 953371542}
 --- !u!1 &472066711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &831258694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,12 +1362,12 @@ GameObject:
   - component: {fileID: 943233854}
   - component: {fileID: 943233853}
   m_Layer: 5
-  m_Name: Schedule (1)
+  m_Name: tv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &943233852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1440,7 +1442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953371543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2276,6 +2278,10 @@ MonoBehaviour:
   index: 0
   dialogues: []
   names: []
+  picsTurnOff:
+  - {fileID: 953371542}
+  - {fileID: 943233851}
+  - {fileID: 1942998773}
 --- !u!1 &1795655890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,12 +2626,12 @@ GameObject:
   - component: {fileID: 1942998776}
   - component: {fileID: 1942998775}
   m_Layer: 5
-  m_Name: Schedule (2)
+  m_Name: bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1942998774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2905,23 +2911,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ed40e14bc91ae439db2b6b3ee41b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSceneDialogues:
-  - This is my favorite school bag
-  openSceneNames:
+  dialogues:
+  - 'This looks like the school bag my mom bought for me. '
+  names:
   - Me
   manager: {fileID: 1763129892}
+  pic: {fileID: 1942998773}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 86823507}
+  - {fileID: 41650295}
   - {fileID: 1122152688}
+  - {fileID: 86823507}
   - {fileID: 225459374}
   - {fileID: 831258697}
   - {fileID: 1795655893}
   - {fileID: 1763129891}
   - {fileID: 1081440515}
   - {fileID: 135366565}
-  - {fileID: 41650295}

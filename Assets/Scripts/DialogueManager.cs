@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     //public int number;
     public string[] dialogues;
     public string[] names;
+    public GameObject[] picsTurnOff;
 
     public void StartDialogue()
     {
@@ -27,6 +28,10 @@ public class DialogueManager : MonoBehaviour
         index++;
         if(index >= dialogues.Length)
         {
+            foreach(GameObject pic in picsTurnOff)
+            {
+                pic.SetActive(false); // Turn off all specified pictures
+            }
             index = 0;
             dialogueUI.SetActive(false); // Hide the dialogue UI
             dialogues = new string[0];
