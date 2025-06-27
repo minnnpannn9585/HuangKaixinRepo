@@ -21,5 +21,7 @@ public class Schedule : MonoBehaviour
         transform.parent.GetComponent<ObjectCount>().count += 1;
         transform.GetComponent<Collider2D>().enabled = false;
 
+        LevelOneManager.instance.propNum++;
+
     }
 }

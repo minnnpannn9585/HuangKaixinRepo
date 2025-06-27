@@ -25,9 +25,16 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        if (dialogues[index] == "It’s getting dark. I should leave here.")
+        {
+            LevelOneManager.instance.levelOneEnd = true;
+        }
+        
         index++;
         if(index >= dialogues.Length)
         {
+            
+            
             foreach(GameObject pic in picsTurnOff)
             {
                 pic.SetActive(false); // Turn off all specified pictures
@@ -36,11 +43,22 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.SetActive(false); // Hide the dialogue UI
             dialogues = new string[0];
             names = new string[0];
+            
+            
         }
         else
         {
             dialogueText.text = dialogues[index];
             nameText.text = names[index];
+        }
+
+        if (LevelOneManager.instance != null)
+        {
+            if (LevelOneManager.instance.propNum == 3)
+            {
+                LevelOneManager.instance.propNum = 0;
+                LevelOneManager.instance.GoNextStage();
+            }
         }
         
     }

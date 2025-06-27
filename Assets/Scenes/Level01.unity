@@ -1241,6 +1241,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638642226}
   m_CullTransparentMesh: 1
+--- !u!1 &782924992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782924993}
+  - component: {fileID: 782924994}
+  m_Layer: 0
+  m_Name: LevelOneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782924993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782924992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782924994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782924992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe7cbc763cc4605a2a04d1055eff79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propNum: 0
+  dialogues:
+  - "Looks like I\u2019ve traveled back in time. "
+  - "You\u2019re awake? School\u2019s already over, hurry up and go home! "
+  - ...
+  - Before I could say anything, she vanished.
+  - "She looks kind of familiar, but I can\u2019t remember. My mind is blank, and
+    it feels like I\u2019ve forgotten a lot."
+  - "It\u2019s getting dark. I should leave here."
+  names:
+  - 
+  - Girl 1
+  - Me
+  - 
+  - Me
+  - Me
+  manager: {fileID: 1763129892}
 --- !u!1 &831258693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,3 +2993,4 @@ SceneRoots:
   - {fileID: 1763129891}
   - {fileID: 1081440515}
   - {fileID: 135366565}
+  - {fileID: 782924993}
