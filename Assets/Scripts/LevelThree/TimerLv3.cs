@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class TimerLv3 : MonoBehaviour
 {
     Image timerImage;
-    float timerDuration = 50f; // Duration of the timer in seconds
+    public float timerDuration; // Duration of the timer in seconds
+    float currentTime;
 
     // Start is called before the first frame update
     void Start()
     {
         timerImage = GetComponent<Image>();
+        currentTime = timerDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timerDuration -= Time.deltaTime;
-        timerImage.fillAmount = timerDuration / 50f; // Assuming the timer starts at 10 seconds
+        currentTime -= Time.deltaTime;
+        timerImage.fillAmount = currentTime / timerDuration;
 
-        if(timerDuration <= 0)
+        if(currentTime <= 0)
         {
-            timerDuration = 0;
+            currentTime = 0;
             timerImage.fillAmount = 0;
             // Optionally, you can trigger an event or action when the timer reaches zero
             //Debug.Log("Timer finished!");

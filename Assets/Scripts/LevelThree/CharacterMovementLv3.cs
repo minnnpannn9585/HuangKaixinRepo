@@ -8,6 +8,7 @@ public class CharacterMovementLv3 : MonoBehaviour
     Rigidbody2D rb;
     public float speed = 5f;
     public float jumpForce = 300f;
+    public bool isGrounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class CharacterMovementLv3 : MonoBehaviour
         }
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpForce));
         }
