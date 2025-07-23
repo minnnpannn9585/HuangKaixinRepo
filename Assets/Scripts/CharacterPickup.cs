@@ -8,9 +8,10 @@ public class CharacterPickup : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Pickup"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Animator>().SetTrigger("explode");
+            Destroy(other.gameObject, 0.7f);
         }
 
         if (other.CompareTag("LevelEnd"))
