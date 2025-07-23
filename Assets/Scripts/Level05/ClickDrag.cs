@@ -21,10 +21,10 @@ public class ClickDrag : MonoBehaviour
         if (clicked)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
+            transform.position = new Vector3
+                (mousePos.x, mousePos.y, transform.position.z);
         }
     }
-
     private void OnMouseDown()
     {
         clicked = true;
@@ -38,7 +38,6 @@ public class ClickDrag : MonoBehaviour
             obj.GetComponent<SpriteRenderer>().enabled = true;
             Destroy(gameObject);
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
