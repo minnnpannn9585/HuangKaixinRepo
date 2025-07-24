@@ -15,15 +15,21 @@ public class CharacterMoveLv2 : MonoBehaviour
     {
         float hori = Input.GetAxis("Horizontal");
 
-        transform.Translate(hori * Time.deltaTime * 5f, 0, 0);
+        transform.Translate(hori * Time.deltaTime * 2f, 0, 0);
 
         if(hori > 0)
         {
             transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+            transform.GetChild(0).GetComponent<Animator>().SetBool("isMoving", true);
         }
         else if (hori < 0)
         {
             transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+            transform.GetChild(0).GetComponent<Animator>().SetBool("isMoving", true);
+        }
+        else if(hori == 0)
+        {
+            transform.GetChild(0).GetComponent<Animator>().SetBool("isMoving", false);
         }
     }
 }
